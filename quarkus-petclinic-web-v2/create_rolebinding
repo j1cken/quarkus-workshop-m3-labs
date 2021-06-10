@@ -1,0 +1,12 @@
+export PRJ=$(oc project |cut -d '"' -f 2) && echo "kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: default
+  namespace: ${PRJ}
+subjects:
+  - kind: ServiceAccount
+    name: default
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view" | oc apply -f -

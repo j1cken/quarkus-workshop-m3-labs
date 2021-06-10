@@ -1,0 +1,7 @@
+export PRJ=$(oc project |cut -d '"' -f 2) && echo "apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap
+  namespace: ${PRJ}
+data:
+  message.hello.quarkus: Kubernetes Native Java, Quarkus" | oc apply -f -
