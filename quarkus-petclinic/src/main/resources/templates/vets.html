@@ -12,6 +12,20 @@
     <tbody>
         <!-- TODO: Add a for loop to list vets -->
 
+        {#for vet in vets}
+        <tr>
+            <td>{vet.firstName} {vet.lastName}</td>
+            {#if vet.specialties.isEmpty}
+                <td><span>none</span></td>
+            {#else}
+                <td>
+                <!-- TODO: Add a for loop to list specialty -->
+                none
+                </td>
+            {/if}
+        </tr>
+        {/for}
+
     </tbody>
 </table>
 </div></div>
