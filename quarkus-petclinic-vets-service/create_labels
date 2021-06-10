@@ -1,0 +1,2 @@
+oc label dc/vets-database app.openshift.io/runtime=postgresql --overwrite && \
+oc label dc/vets-database app.kubernetes.io/part-of=vets-app --overwrite

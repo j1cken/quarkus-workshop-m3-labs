@@ -1,0 +1,5 @@
+export CHE_PROJECTS=${PWD}/..
+export CHE_PROJECTS_ROOT=${PWD}/..
+bash -x $CHE_PROJECTS/quarkus-workshop-m3-labs/scripts/deploy-customers-service.sh
+bash -x $CHE_PROJECTS/quarkus-workshop-m3-labs/scripts/deploy-visits-service.sh
+bash -x $CHE_PROJECTS/quarkus-workshop-m3-labs/scripts/deploy-petclinic-web-v2.sh
