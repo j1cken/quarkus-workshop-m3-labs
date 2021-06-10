@@ -20,7 +20,9 @@
             {#else}
                 <td>
                 <!-- TODO: Add a for loop to list specialty -->
-                none
+                {#for specialty in vet.specialties}
+                {specialty.name}
+                {/for}
                 </td>
             {/if}
         </tr>
