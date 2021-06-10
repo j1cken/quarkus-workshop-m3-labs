@@ -8,12 +8,23 @@ import javax.ws.rs.core.MediaType;
 
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
+import io.quarkus.qute.api.ResourcePath;
 
 @Path("/")
 public class WelcomeResource {
 
     // TODO: Inject template
 
+    @Inject
+    // @ResourcePath
+    Template welcome;
+
     // TODO: Add TemplateInstance
+
+    @GET
+    @Produces(MediaType.TEXT_HTML)
+    public TemplateInstance get() {
+        return welcome.data("active", "home");
+    }
 
 }
